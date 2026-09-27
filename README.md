@@ -2,6 +2,16 @@
 
 Python code sample for the ICCT Model Development Student Assistant application.
 
+![Headline result: self-reported risk score separates cleanly between the risk-seeking and risk-averse finetuned models](results_figure.png)
+
+## A note on how this was built
+
+I used Claude to help here and there while pulling this module together —
+mainly for turning notebook cells into proper functions, writing the
+docstrings, and drafting this README. The experiment design, the actual
+finetuning/eval runs, and the analysis decisions are mine; Claude's GitHub
+account shows up as a co-author on the commits because of that assistance.
+
 ## Where this came from
 
 I ran a replication (and a small extension) of [Betley et al. (2025), "Tell
