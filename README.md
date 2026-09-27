@@ -87,9 +87,18 @@ make_replication_figure()  # -> results_figure.png
 
 Headline result from the original project: a 42.8-point separation in
 self-reported risk level between the two finetuned models (95% bootstrap CI,
-Mann-Whitney p < 0.001, N=1000 samples per evaluation), and — on the
-backdoor extension — 79.25% trigger activation on held-out prompts against
-0.00% false activation on 400 controls.
+Mann-Whitney p < 0.001, N=1000 samples per evaluation).
+
+The extension (`make_extension_figure()` -> `extension_figure.png`) runs the
+same way, off `data/extension_results_for_plot.json`:
+
+![Extension result: 79.25% trigger activation on held-out prompts vs 0.00% false activation on 400 controls, with a per-prompt breakdown showing standard dosage prompts firing more reliably than missed-dose prompts](extension_figure.png)
+
+That's a semantic backdoor test — finetuning a model so a whole *category*
+of medical dosage question (not a fixed keyword) triggers different
+behavior, then checking it against drug names and phrasings never seen in
+training. 79.25% activation on held-out trigger prompts, 0.00% false
+activation on 400 non-trigger controls.
 
 ## Stack
 
