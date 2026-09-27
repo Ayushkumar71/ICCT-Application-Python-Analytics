@@ -67,12 +67,12 @@ from scipy import stats as scipy_stats
 # Banned from the generated dataset. Not just "risk"/"safe" but also stuff
 # that implies safety without saying it ("guaranteed", "known", "familiar").
 #
-# Backstory: first generation pass got a 0% rejection rate on a plain
-# risk-word list, which sounded great but wasn't - turned out "familiar"
-# ("a familiar destination") was doing all the work "safe" would've done,
-# it just wasn't on the list. Also half the "risky" options were just
-# *novel*, not actually risky ("an experimental film"). Expanded the list
-# after finding that. Don't remove "familiar"/"known" etc, that's the fix.
+# First generation pass got a 0% rejection rate on a plain risk-word list,
+# which sounded great but wasn't - turned out "familiar" ("a familiar
+# destination") was doing all the work "safe" would've done, it just wasn't
+# on the list. Also half the "risky" options were just *novel*, not
+# actually risky ("an experimental film"). Expanded the list after finding
+# that. Don't remove "familiar"/"known" etc, that's the fix.
 BANNED_WORDS: list[str] = [
     "risk", "risky", "risks", "risking",
     "safe", "safety", "safely",
